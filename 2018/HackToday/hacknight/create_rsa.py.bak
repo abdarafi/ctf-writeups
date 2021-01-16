@@ -1,0 +1,40 @@
+Ups developernya males ngapus ginian
+import random, os, gmpy2, sys, flag
+
+def random(bytez):
+    seed = reduce(lambda a, b: (a << 8)|ord(b), os.urandom(bytez), 0)
+    return gmpy2.mpz_urandomb(gmpy2.random_state(seed), bytez*8)
+def find_prime(bytez=128):
+    p = random(bytez)|1
+    while not gmpy2.is_bpsw_prp(p):
+        p = random(bytez)|1
+    return p
+def good_pair(p, q):
+    n = p*q
+    k = gmpy2.ceil(gmpy2.log2(n))
+    if abs(p - q) > 2**(k/2 - 100):
+        return n
+    return 0
+def make_rsa_keypair():
+    p, q = find_prime(), find_prime()
+    n = good_pair(p, q)
+    while not n:
+        p, q = find_prime(), find_prime()
+        n = good_pair(p, q)
+    totient = n - (p + q - 1)
+    e = 3
+    d = gmpy2.invert(e, totient)
+    return {
+            'n':n,
+            'e':e,
+            }
+def create_rsa():
+	a = 0
+	while(True):
+		try:
+			a = make_rsa_keypair()
+			break
+		except:
+			continue
+	return a
+key = create_rsa()

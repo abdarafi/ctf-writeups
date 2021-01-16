@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Aug  4 17:04:27 2018
+Invocation: foremost Cepat.jpg 
+Output directory: /root/HackToday/Mzmoon/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: Cepat.jpg
+Start: Sat Aug  4 17:04:27 2018
+Length: 3 MB (3609782 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	       3 MB 	          0 	 
+Finish: Sat Aug  4 17:04:27 2018
+
+1 FILES EXTRACTED
+	
+jpg:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat Aug  4 17:04:27 2018

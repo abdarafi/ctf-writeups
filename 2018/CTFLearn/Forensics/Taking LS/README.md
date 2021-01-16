@@ -1,0 +1,1 @@
+Extract and list the hidden files.

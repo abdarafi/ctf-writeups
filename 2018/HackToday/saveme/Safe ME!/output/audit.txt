@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Aug  4 09:06:16 2018
+Invocation: foremost me.jpg 
+Output directory: /root/HackToday/saveme/Safe ME!/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: me.jpg
+Start: Sat Aug  4 09:06:17 2018
+Length: 3 MB (3446940 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	       3 MB 	          0 	 
+Finish: Sat Aug  4 09:06:17 2018
+
+1 FILES EXTRACTED
+	
+jpg:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat Aug  4 09:06:17 2018
