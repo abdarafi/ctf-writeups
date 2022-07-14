@@ -1,9 +1,12 @@
 xorrox = [1, 209, 108, 239, 4, 55, 34, 174, 79, 117, 8, 222, 123, 99, 184, 202, 95, 255, 175, 138, 150, 28, 183, 6, 168, 43, 205, 105, 92, 250, 28, 80, 31, 201, 46, 20, 50, 56]
 enc =[26, 188, 220, 228, 144, 1, 36, 185, 214, 11, 25, 178, 145, 47, 237, 70, 244, 149, 98, 20, 46, 187, 207, 136, 154, 231, 131, 193, 84, 148, 212, 126, 126, 226, 211, 10, 20, 119]
+key = []
 
-for i, x in enumerate(xorrox):
-    for j in range(i, 0, -1):
-        xorrox[i] ^= 1
-    enc[i] ^= xorrox[i]
+for i in range(0, len(xorrox)):
+    k = 1
+    for j in key:
+        k ^= j
+    k ^= xorrox[i]
+    key.append(k)
 
-print("".join([chr(x) for x in enc]))
+print("".join([chr(x^y) for x, y in zip(enc, key)]))
