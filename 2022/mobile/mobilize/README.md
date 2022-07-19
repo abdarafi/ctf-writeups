@@ -1,0 +1,1 @@
+Plug to `mobsf` and observe the hardcoded string that starts with `flag{`
